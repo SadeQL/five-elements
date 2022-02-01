@@ -21,7 +21,7 @@ const ContactForm = () => {
 
   return (
     <form
-      action={FORM_ENDPOINT}
+      action="http://localhost:9000/EmailContact"
       onSubmit={handleSubmit}
       method="POST"
       target="_blank"

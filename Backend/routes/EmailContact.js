@@ -1,13 +1,15 @@
 const nodemailer = require("nodemailer");
-var express = require("express");
+let express = require("express");
 let router = express.Router();
 
-router.get("/", function (req, res, next) {
-  res.send("Email sending is working");
+router.post("/", (req, res, next) => {
+  console.log(req.body);
+  res.status(201).json({ message: "objet créé" });
+  main(req.body.email).catch(console.error);
 });
 
 // async..await is not allowed in global scope, must use a wrapper
-async function main() {
+async function main(email) {
   // Generate test SMTP service account from ethereal.email
   // Only needed if you don't have a real mail account for testing
   let testAccount = await nodemailer.createTestAccount();
@@ -26,7 +28,7 @@ async function main() {
   // send mail with defined transport object
   let info = await transporter.sendMail({
     from: '"Fred Foo 👻" <foo@example.com>', // sender address
-    to: "bar@example.com, baz@example.com", // list of receivers
+    to: email, // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
     html: "<b>Hello world?</b>", // html body
@@ -40,6 +42,4 @@ async function main() {
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }
 
-main().catch(console.error);
-
-module.exports = EmailContact;
+module.exports = router;
