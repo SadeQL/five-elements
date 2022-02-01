@@ -4,8 +4,8 @@ let router = express.Router();
 
 router.post("/", (req, res, next) => {
   console.log(req.body);
-  res.status(201).json({ message: "objet créé" });
   main(req.body.email).catch(console.error);
+  res.status(201).json({ message: "objet créé" });
 });
 
 // async..await is not allowed in global scope, must use a wrapper
@@ -20,14 +20,15 @@ async function main(email) {
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: testAccount.user, // generated ethereal user
-      pass: testAccount.pass, // generated ethereal password
+      user: "margot.haag41@ethereal.email", // generated ethereal user
+      pass: "KyT9aNFJkqCeKeRm6h", // generated ethereal password
     },
+    sendMail: true,
   });
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"Fred Foo 👻" <foo@example.com>', // sender address
+    from: "margot.haag41@ethereal.email", // sender address
     to: email, // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
