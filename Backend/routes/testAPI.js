@@ -1,8 +1,11 @@
 let express = require("express");
 let router = express.Router();
 
-router.get("/", function (req, res, next) {
-  res.send("API is working properly");
-});
+router.post('/', (req, res, next) => {
+  console.log(req.body)
+  res.status(201).json({message:'objet créé'})
+  res.send("message reçu")
+})
+
 
 module.exports = router;
