@@ -1,24 +1,68 @@
 import React from "react";
-import Encens from "../imgs/encens.jpg";
-import { Button, Card } from "react-bootstrap";
-import { PopupButton } from "react-calendly";
+import { useState } from "react";
+import HeroImage from "../imgs/hero.png";
+import {
+  Button,
+  Card,
+  Carousel,
+  Col,
+  Container,
+  Image,
+  Row,
+  Stack,
+} from "react-bootstrap";
+import { PopupModal } from "react-calendly";
 
-const Hero = () => {
-  return (
-    <>
-      <Card className="bg-dark text-white">
-        <Card.Img src={Encens} alt="Card image" />
-        <Card.ImgOverlay>
-          <Card.Title>CREATE YOUR BALANCE</Card.Title>
-          <PopupButton
-            url="https://calendly.com/sadefryt"
-            rootElement={document.getElementById("root")}
-            text="DIVE IN"
-          />
-        </Card.ImgOverlay>
-      </Card>
-    </>
-  );
-};
+export default class Hero extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false,
+    };
+  }
 
-export default Hero;
+  render() {
+    return (
+      <>
+        <Container fluid="md">
+          <Row>
+            <Col sm={{ span: 6, offset: 0 }}>
+              <Image src={HeroImage} fluid />
+            </Col>
+            {/*        <Card className="bg-dark text-white">
+          <Card.Img src={HeroImage} alt="Card image" /> */}
+            {/*  <Card.ImgOverlay> */}
+            {/*    <Card.Title>CREATE YOUR BALANCE</Card.Title> */}
+
+            <Col sm={{ span: 3, offset: 2 }}>
+              <h1>CREATE YOUR BALANCE</h1>
+              <Button
+                variant="primary"
+                onClick={() => this.setState({ isOpen: true })}
+              >
+                BOOK A SESSION
+              </Button>{" "}
+              <PopupModal
+                url="https://calendly.com/sadefryt"
+                pageSettings={this.props.pageSettings}
+                utm={this.props.utm}
+                onModalClose={() => this.setState({ isOpen: false })}
+                open={this.state.isOpen}
+                rootElement={document.getElementById("root")}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <h1 className="p-10 text-center">
+                Reconnect. Reflect. Cultivate.
+              </h1>
+            </Col>
+          </Row>
+        </Container>
+        {/*   </Card.ImgOverlay> */}
+        {/*  </Card> */}
+      </>
+    );
+  }
+}

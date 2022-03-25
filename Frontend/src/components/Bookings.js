@@ -1,80 +1,63 @@
 import React, { useState } from "react";
-import { PopupButton, PopupWidget, InlineWidget } from "react-calendly";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import {
+  PopupButton,
+  PopupWidget,
+  InlineWidget,
+  PopupModal,
+} from "react-calendly";
 
-const Bookings = () => {
-  return (
-    <>
-      <PopupWidget
-        url="https://calendly.com/sadefryt"
-        rootElement={document.getElementById("root")}
-        text="Click here to schedule"
-      />
-    </>
-  );
-};
+export default class Bookings extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false,
+    };
+  }
 
-/* const FORM_ENDPOINT = ""; */ // TODO - fill on the later step
-
-/* const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = () => {
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 100);
-  };
-
-  if (submitted) {
+  render() {
     return (
       <>
-        <div className="text-2xl">Thank you!</div>
-        <div className="text-md">We'll be in touch soon.</div>
+        <Container fluid="md">
+          <Row>
+            <Col>
+              <h1>Bookings</h1>
+            </Col>
+            <Row>
+              <p>I speak English, French, Mandarin and Japanese fluently.</p>
+              <p>
+                Please note that all the readings are done digitally. In-person
+                readings are restricted due to the current situation of the
+                pandemic. If you have any requests or inquiries, please feel
+                free to contact me anytime.{" "}
+              </p>
+            </Row>
+            <Col>
+              <Button
+                variant="primary"
+                onClick={() => this.setState({ isOpen: true })}
+              >
+                BOOK A SESSION
+              </Button>{" "}
+              <PopupModal
+                url="https://calendly.com/sadefryt"
+                pageSettings={this.props.pageSettings}
+                utm={this.props.utm}
+                onModalClose={() => this.setState({ isOpen: false })}
+                open={this.state.isOpen}
+                rootElement={document.getElementById("root")}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <h1 className="p-10 text-center">
+                Introspect. Recalibrate. Balance.
+              </h1>
+            </Col>
+          </Row>
+        </Container>
       </>
     );
   }
-
-  return (
-    <form
-      action="http://localhost:9000/EmailContact"
-      onSubmit={handleSubmit}
-      method="POST"
-      target="_blank"
-    >
-      <div className="mb-3 pt-0">
-        <input
-          type="text"
-          placeholder="Your name"
-          name="name"
-          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
-          required
-        />
-      </div>
-      <div className="mb-3 pt-0">
-        <input
-          type="email"
-          placeholder="Email"
-          name="email"
-          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
-          required
-        />
-      </div>
-      <div className="mb-3 pt-0">
-        <textarea
-          placeholder="Your message"
-          name="message"
-          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
-          required
-        />
-      </div>
-      <div className="mb-3 pt-0">
-        <button
-          className="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-          type="submit"
-        >
-          Send a message
-        </button>
-      </div>
-    </form>
-  );
-}; */
-
-export default Bookings;
+}

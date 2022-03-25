@@ -1,17 +1,21 @@
 import React from "react";
 
 import Hero from "./hero";
-import Bazi from "./bazi";
+import Bazi from "./Bazi";
 import Footer from "./footer";
 import Bookings from "./Bookings";
 import Navigation from "./Navbar";
+import Testimonials from "./Testimonials";
+import Readings from "./Readings";
 
 const Layout = () => {
   return (
     <>
       <Navigation />
-      <Hero></Hero>
-      <Bazi></Bazi>
+      <Hero />
+      <Bazi />
+      <Testimonials />
+      <Readings />
       <Bookings />
     </>
   );

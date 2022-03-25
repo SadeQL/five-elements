@@ -1,39 +1,35 @@
 import React from "react";
-import elementImage from "../imgs/5-elements.webp";
-
+import { Image } from "react-bootstrap";
+import BaziImage from "../imgs/image2.jpg";
 const Bazi = () => {
   return (
     <>
+      <Image src={BaziImage} fluid alt="five elements" className="h-auto" />
       <div className="bazi-container">
         <div className="bazi-left-box">
           {/*   <div className="box-left"></div> */}
-          <h1 className="bazi-left-title">What is Bazi?</h1>
-          <h2 className="bazi-left-second-title">八字 / Ba Zi / </h2>
+
+          <h1 className="bazi-left-second-title">八字</h1>
+          <h3>/ bāzì / eight characters </h3>
           <p className="bazi-left-body">
-            <strong>BaZi</strong> is an ancient art of{" "}
-            <strong>destiny reading</strong>, considered as a concept for
-            <strong> Metaphysics</strong>, <strong>Numerology</strong> and{" "}
-            <strong>Astrology</strong>. <br />
+            BaZi, or 生辰八字, also known as Four Pillars of Destiny, is an
+            ancient art of destiny reading, considered a concept for
+            Metaphysics, Numerology and Astrology. <br />
+            Inside each one of us lives a unique balance of energy, reflecting
+            in our BaZi charts. It is based on Yin and Yang, complex
+            combinations of Chinese characters and the following five elements:
+            Wood, Fire, Earth, Metal and Water.
             <br />
-            With a modern approach, I redefine traditional reading to personal
-            guidance to the well-being of life. Inside each one of us lives a
-            <strong>unique balance of energy</strong>, reflecting in our BaZi
-            charts. <br />
+            Furthermore, BaZi is linked to Traditional Chinese Medicine (TCM)
+            and the application of FengShui. <br />
+            It is the ancient wisdom of energy and balance.
             <br />
-            It is based on complex combinations of Chinese characters and the
-            following five elements: wood, fire, earth, metal and water.
+            BaZi tells us about who we are, such as information on the state of
+            our health, our personality traits, conscious and subconscious
+            thoughts, also our actions and interactions with people and the
+            universe.
           </p>
         </div>
-
-        <img src={elementImage} className="element-image" alt="five elements" />
-      </div>
-
-      <div className="bazi-banner">
-        <p>
-          BaZi is also linked to Traditional <strong>Chinese Medicine</strong>{" "}
-          and the application of <strong>FengShui</strong>. It is the ancient
-          wisdom of energy and balance.
-        </p>
       </div>
     </>
   );
