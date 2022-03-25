@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Hero from "./hero";
 import Bazi from "./bazi";
 import Footer from "./footer";
-import ContactForm from "./Contact";
+import Bookings from "./Bookings";
 
 const Layout = () => {
   return (
@@ -12,7 +12,7 @@ const Layout = () => {
       <Navbar />
       <Hero></Hero>
       <Bazi></Bazi>
-      <ContactForm />
+      <Bookings />
     </>
   );
 };
