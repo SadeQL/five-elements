@@ -1,15 +1,15 @@
 import React from "react";
 
-import Navbar from "./Navbar";
 import Hero from "./hero";
 import Bazi from "./bazi";
 import Footer from "./footer";
 import Bookings from "./Bookings";
+import Navigation from "./Navbar";
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
+      <Navigation />
       <Hero></Hero>
       <Bazi></Bazi>
       <Bookings />

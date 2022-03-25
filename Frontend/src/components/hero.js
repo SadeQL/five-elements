@@ -1,19 +1,23 @@
 import React from "react";
 import Encens from "../imgs/encens.jpg";
+import { Button, Card } from "react-bootstrap";
+import { PopupButton } from "react-calendly";
 
 const Hero = () => {
   return (
-    <div className="hero-container">
-      <ul className="left-container">
-        <li className="hero-title">
-          <h1>Create Your Balance</h1>
-        </li>
-        <li className="hero-btn">
-          <a href="#">Discover Now</a>
-        </li>
-      </ul>
-      <img src={Encens} className="hero-img" alt="hero image" />
-    </div>
+    <>
+      <Card className="bg-dark text-white">
+        <Card.Img src={Encens} alt="Card image" />
+        <Card.ImgOverlay>
+          <Card.Title>CREATE YOUR BALANCE</Card.Title>
+          <PopupButton
+            url="https://calendly.com/sadefryt"
+            rootElement={document.getElementById("root")}
+            text="DIVE IN"
+          />
+        </Card.ImgOverlay>
+      </Card>
+    </>
   );
 };
 
