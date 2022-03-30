@@ -1,12 +1,13 @@
 import React from "react";
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             alt="logo"
             src="./five-elements-logo.png"
@@ -19,10 +20,10 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#bazi">Bazi</Nav.Link>
-            <Nav.Link href="#readings">Readings</Nav.Link>
-            <Nav.Link href="#bookings">Bookings</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/bazi">Bazi</Nav.Link>
+            <Nav.Link href="/readings">Readings</Nav.Link>
+            <Nav.Link href="/bookings">Bookings</Nav.Link>
 
             <NavDropdown title="About" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">

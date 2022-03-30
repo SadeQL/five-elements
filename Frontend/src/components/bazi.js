@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image } from "react-bootstrap";
 import BaziImage from "../imgs/image2.jpg";
 const Bazi = () => {

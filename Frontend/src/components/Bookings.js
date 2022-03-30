@@ -12,6 +12,7 @@ export default class Bookings extends React.Component {
     super(props);
     this.state = {
       isOpen: false,
+      isLoading: false,
     };
   }
 
