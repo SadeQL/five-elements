@@ -7,12 +7,14 @@ import Bookings from "./Bookings";
 import Navigation from "./Navbar";
 import Testimonials from "./Testimonials";
 import Readings from "./Readings";
+import { Contact } from "./Contact";
 
 const Layout = () => {
   return (
     <>
       <Hero />
       <Testimonials />
+      <Contact />
       {/*  <Bazi />
       
       <Readings />

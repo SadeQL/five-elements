@@ -12,14 +12,14 @@ const Testimonials = () => {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        <img className="d-block w-100 h-5" src={Ocre} alt="First slide" />
+        <img className="d-block w-100 h-2" src={Ocre} alt="First slide" />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100 h-5" src={Ocre} alt="Second slide" />
+        <img className="d-block w-100 h-2" src={Ocre} alt="Second slide" />
 
         <Carousel.Caption>
           <h3>Second slide label</h3>
@@ -27,7 +27,7 @@ const Testimonials = () => {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100 h-5" src={Ocre} alt="Third slide" />
+        <img className="d-block w-100 h-2" src={Ocre} alt="Third slide" />
 
         <Carousel.Caption>
           <h3>Third slide label</h3>
