@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Hero from "./components/hero";
 import Bookings from "./components/Bookings";
-import Layout from "./components/layout";
+import Home from "./components/home";
 import Readings from "./components/Readings";
 import Bazi from "./components/Bazi";
 import Navigation from "./components/Navbar";

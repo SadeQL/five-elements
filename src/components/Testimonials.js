@@ -10,7 +10,7 @@ const Testimonials = () => {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect} id="carousel">
       <Carousel.Item>
         <img className="d-block w-100 h-2" src={Ocre} alt="First slide" />
         <Carousel.Caption>

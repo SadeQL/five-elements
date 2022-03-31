@@ -12,7 +12,8 @@ import {
   Stack,
 } from "react-bootstrap";
 import { PopupModal } from "react-calendly";
-
+/* import '../App.css'
+ */
 export default class Hero extends React.Component {
   constructor(props) {
     super(props);
@@ -25,8 +26,8 @@ export default class Hero extends React.Component {
     return (
       <>
         <Container fluid="md">
-          <Row>
-            <Col sm={{ span: 6, offset: 0 }}>
+          <Row classname="row">
+            <Col sm={{ span: 6, offset: 0 }} className="col">
               <Image src={HeroImage} fluid />
             </Col>
             {/*        <Card className="bg-dark text-white">
@@ -34,9 +35,10 @@ export default class Hero extends React.Component {
             {/*  <Card.ImgOverlay> */}
             {/*    <Card.Title>CREATE YOUR BALANCE</Card.Title> */}
 
-            <Col sm={{ span: 3, offset: 2 }}>
+            <Col sm={{ span: 3, offset: 2 }} className="col">
               <h1>CREATE YOUR BALANCE</h1>
               <Button
+                class = "bookingButton"
                 variant="primary"
                 onClick={() => this.setState({ isOpen: true })}
               >
@@ -50,7 +52,7 @@ export default class Hero extends React.Component {
                 open={this.state.isOpen}
                 rootElement={document.getElementById("root")}
               />
-            </Col>
+           </Col>
           </Row>
           <Row>
             <Col>
