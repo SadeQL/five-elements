@@ -19,8 +19,8 @@ export default class Bookings extends React.Component {
   render() {
     return (
       <>
-        <Container fluid="md">
-          <Row>
+        <Container fluid="md" >
+          <Row id="bookingContainer">
             <Col>
               <h1>Bookings</h1>
             </Col>

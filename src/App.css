@@ -1,25 +1,24 @@
 body {
   background-color: #f8f9fa;
   margin-left: 4vw;
-  margin-right: 4vw;
+  margin-right: 4vw; 
 }
 
-  .homeCol {
+.homeCol {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
 
-
-.row {
+.row, .h-50 {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
 }
 
 #carousel {
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
 }
 
 #contact-form {
@@ -37,6 +36,20 @@ label {
   width: fit-content;
   margin-top: 2%;
 }
+
+#bookingContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 3vh;
+}
+
+#basic-navbar-nav {
+  font-size: 1.2em;
+}
+
+#navBarContainer {
+  margin-left: -2%;
+}
  
 /* @media screen and (min-width: 30em) and (orientation: landscape) {
   body {
@@ -50,3 +63,5 @@ label {
     margin-right: 7vw;
   }
 }
+
+

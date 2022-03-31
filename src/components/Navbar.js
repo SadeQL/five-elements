@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
   return (
     <Navbar bg="light" expand="lg">
-      <Container>
+      <Container id="navBarContainer">
         <Navbar.Brand href="/">
           <img
             alt="logo"
@@ -15,7 +15,7 @@ const Navigation = () => {
             height="70"
             className="d-inline-block align-center"
           />{" "}
-          CINQ ÉLÉMENTS
+          <span>CINQ ÉLÉMENTS</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

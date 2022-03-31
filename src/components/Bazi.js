@@ -5,7 +5,7 @@ const Bazi = () => {
   return (
     <>
       <Container fluid="md">
-        <Row>
+        <Row classname="row">
           <Col sm={{ span: 6, offset: 0 }}>
             <Image src={BaziImage} fluid />
           </Col>
@@ -14,7 +14,7 @@ const Bazi = () => {
           {/*  <Card.ImgOverlay> */}
           {/*    <Card.Title>CREATE YOUR BALANCE</Card.Title> */}
 
-          <Col sm={{ span: 3, offset: 2 }}>
+          <Col sm={{ span: 3, offset: 2 }} className="homeCol">
             <h1>八字</h1>
             <h3>/ bāzì / eight characters </h3>
           </Col>

@@ -27,7 +27,7 @@ export default class Hero extends React.Component {
       <>
         <Container fluid="md">
           <Row classname="row">
-            <Col sm={{ span: 6, offset: 0 }} className="col">
+            <Col sm={{ span: 6, offset: 0 }} className="homeCol">
               <Image src={HeroImage} fluid />
             </Col>
             {/*        <Card className="bg-dark text-white">
