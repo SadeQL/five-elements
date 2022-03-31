@@ -1,5 +1,5 @@
 import logo from "./imgs/logo.png";
-import Layout from "./components/layout.js";
+import Home from "./components/home.js";
 import "./App.css";
 import Navigation from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -12,7 +12,7 @@ import Hero from "./components/hero";
 function App() {
   return (
     <>
-      <Layout />
+      <Home />
 
       {/* <Testimonials />
       <Readings />

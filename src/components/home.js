@@ -9,7 +9,7 @@ import Testimonials from "./Testimonials";
 import Readings from "./Readings";
 import { Contact } from "./Contact";
 
-const Layout = () => {
+const Home = () => {
   return (
     <>
       <Hero />
@@ -23,4 +23,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default Home;
