@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
-import Ocre from "../imgs/ocre.jpg";
+import Ocre from "../imgs/ocre.png";
 
 const Testimonials = () => {
   const [index, setIndex] = useState(0);

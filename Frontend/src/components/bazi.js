@@ -1,16 +1,37 @@
 import React, { useState } from "react";
-import { Image } from "react-bootstrap";
+import { Container, Image, Row, Col } from "react-bootstrap";
 import BaziImage from "../imgs/image2.jpg";
 const Bazi = () => {
   return (
     <>
-      <Image src={BaziImage} fluid alt="five elements" className="h-auto" />
+      <Container fluid="md">
+        <Row>
+          <Col sm={{ span: 6, offset: 0 }}>
+            <Image src={BaziImage} fluid />
+          </Col>
+          {/*        <Card className="bg-dark text-white">
+          <Card.Img src={HeroImage} alt="Card image" /> */}
+          {/*  <Card.ImgOverlay> */}
+          {/*    <Card.Title>CREATE YOUR BALANCE</Card.Title> */}
+
+          <Col sm={{ span: 3, offset: 2 }}>
+            <h1>八字</h1>
+            <h3>/ bāzì / eight characters </h3>
+          </Col>
+        </Row>
+      </Container>
+      {/*  <Image
+        src={BaziImage}
+        fluid
+        alt="five elements"
+        className="h-auto w-50"
+      /> */}
       <div className="bazi-container">
         <div className="bazi-left-box">
           {/*   <div className="box-left"></div> */}
 
-          <h1 className="bazi-left-second-title">八字</h1>
-          <h3>/ bāzì / eight characters </h3>
+          {/*  <h1 className="bazi-left-second-title">八字</h1>
+          <h3>/ bāzì / eight characters </h3> */}
           <p className="bazi-left-body">
             BaZi, or 生辰八字, also known as Four Pillars of Destiny, is an
             ancient art of destiny reading, considered a concept for

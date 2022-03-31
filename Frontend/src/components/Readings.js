@@ -14,7 +14,12 @@ export default class Readings extends React.Component {
   render() {
     return (
       <>
-        <Image src={ReadImg} fluid alt="five elements" className="h-auto" />
+        <Image
+          src={ReadImg}
+          fluid
+          alt="five elements"
+          className="h-50 w-auto float-right"
+        />
         <div className="bazi-container">
           <div className="bazi-left-box">
             {/*   <div className="box-left"></div> */}
