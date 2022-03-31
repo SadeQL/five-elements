@@ -4,12 +4,13 @@ body {
   margin-right: 4vw;
 }
 
-  .col {
+  .homeCol {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
+
 
 .row {
   display: flex;

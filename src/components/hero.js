@@ -35,7 +35,7 @@ export default class Hero extends React.Component {
             {/*  <Card.ImgOverlay> */}
             {/*    <Card.Title>CREATE YOUR BALANCE</Card.Title> */}
 
-            <Col sm={{ span: 3, offset: 2 }} className="col">
+            <Col sm={{ span: 3, offset: 2 }} className="homeCol">
               <h1>CREATE YOUR BALANCE</h1>
               <Button
                 class = "bookingButton"
