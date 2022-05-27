@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Button, Image } from "react-bootstrap";
+import { Button, Col, Image, Row } from "react-bootstrap";
 import { PopupModal } from "react-calendly";
-import ReadImg from "../imgs/image1.jpg";
+import ReadImg from "../imgs/readings.jpg";
+import ReadImg2 from "../imgs/readings-2.jpg";
+import Footer from "./Footer";
 
 export default class Readings extends React.Component {
   constructor(props) {
@@ -14,60 +16,108 @@ export default class Readings extends React.Component {
   render() {
     return (
       <>
-        <Image
-          src={ReadImg}
-          fluid
-          alt="five elements"
-          className="h-50 w-auto float-right"
-        />
-        <div className="bazi-container">
-          <div className="bazi-left-box">
-            {/*   <div className="box-left"></div> */}
-
-            <h1 className="bazi-left-second-title">Readings</h1>
-
-            <p className="bazi-left-body">
-              BaZi readings reconnect one with oneself in depth. These are
-              elevated moments that help you explore and illuminate your reality
-              while diving deep into your own mind and soul. My readings are
-              intuitive insights and holistic guidance based on your personal
-              BaZi chart. The goal is to help you learn about yourself and
-              cultivate your potential with self awareness, a mindset that leads
-              towards a more aligned personal, professional and creative aspects
-              in life.
-              <br />
-              Why do I think the way I do?
-              <br />
-              How do I recalibrate towards a new path?
-              <br />
-              When is the best time to act?
-              <br />
-              Allowing yourself to change and grow is the initiation to the
-              process of self development. By understanding our thoughts and
-              behaviors from a spiritual perspective, we can reflect,
-              introspect, and rewrite our story.
-              <br />
-              While booking a session, you will be asked to provide information
-              regarding the exact time of your birth, which is crucial for your
-              BaZi chart. In order to give precise guidance, questions about the
-              aspects in which you would like to focus on are required.
-            </p>
-          </div>
-          <Button
-            variant="primary"
-            onClick={() => this.setState({ isOpen: true })}
-          >
-            BOOK A SESSION
-          </Button>{" "}
-          <PopupModal
-            url="https://calendly.com/sadefryt"
-            pageSettings={this.props.pageSettings}
-            utm={this.props.utm}
-            onModalClose={() => this.setState({ isOpen: false })}
-            open={this.state.isOpen}
-            rootElement={document.getElementById("root")}
+        <div className="d-flex flex-column justify-content-center">
+          <Image
+            src={ReadImg}
+            fluid
+            style={{
+              margin: "auto",
+              maxHeight: "150vh",
+              width: "auto",
+              textAlign: "center",
+            }}
           />
         </div>
+        <div className="d-flex flex-column justify-content-center">
+          <h1
+            style={{
+              textAlign: "center",
+              fontFamily: "EBGaramond",
+              fontWeight: "bold",
+              marginBottom: "3vh",
+              marginTop: "5vh",
+            }}
+          >
+            Readings
+          </h1>
+        </div>
+        <div>
+          <p
+            style={{
+              fontFamily: "Proxima Nova",
+              marginLeft: "8vh",
+              marginRight: "8vh",
+              marginTop: "8vh",
+            }}
+          >
+            BaZi readings with me are elevated moments of intuitive insights and
+            holistic energy guidance based on your personal BaZi birth chart.
+            <br /> I am here to help you reconnect with yourself in depth, and
+            cultivate your potential with self-awareness.
+            <br />{" "}
+            <ul>
+              <br />
+              <li>Why do I feel like this lately?</li>{" "}
+              <li>When is the best timing for me?</li>{" "}
+              <li>How should I take action towards a new path?</li>
+            </ul>{" "}
+            By understanding your thoughts from a spiritual perspective, your
+            mindset will recalibrate to a balanced personal, professional and
+            creative aspects in life.
+          </p>
+
+          <a
+            href="/booking"
+            style={{
+              color: "#DB7846",
+              fontFamily: "EBGaramond",
+              marginLeft: "8vh",
+              marginRight: "8vh",
+              marginTop: "3vh",
+            }}
+          >
+            how it goes
+          </a>
+        </div>
+        <div className="d-flex flex-column justify-content-center">
+          <Image
+            src={ReadImg2}
+            fluid
+            style={{
+              margin: "auto",
+              padding: "6vh",
+              maxWidth: "90%",
+              textAlign: "center",
+            }}
+          />
+        </div>
+        <Row>
+          <Col>
+            <hr style={{ height: "20" }} />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h3
+              style={{
+                textAlign: "center",
+                color: "#DB7846",
+                fontFamily: "EBGaramond",
+                margin: "10vh",
+              }}
+            >
+              Look at the situation from all angles, <br />
+              and you will become more open.
+              <br />— Dalai Lama
+            </h3>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <hr style={{ height: "20" }} />
+          </Col>
+        </Row>
+        <Footer />
       </>
     );
   }

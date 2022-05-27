@@ -9,6 +9,10 @@ import Home from "./components/home";
 import Readings from "./components/Readings";
 import Bazi from "./components/Bazi";
 import Navigation from "./components/Navbar";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Terms from "./components/terms";
+import Privacy from "./components/privacy";
 
 ReactDOM.render(
   <>
@@ -20,8 +24,12 @@ ReactDOM.render(
 
           <Route path="/bazi" element={<Bazi />} />
 
-          <Route path="/bookings" element={<Bookings />} />
+          <Route path="/booking" element={<Bookings />} />
           <Route path="/readings" element={<Readings />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/terms-and-conditions" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </BrowserRouter>
     </React.StrictMode>

@@ -1,57 +1,105 @@
 import React, { useState } from "react";
 import { Container, Image, Row, Col } from "react-bootstrap";
-import BaziImage from "../imgs/image2.jpg";
+import BaziImage from "../imgs/bazi-1.jpg";
+import Footer from "./Footer";
+import Testimonials from "./Testimonials";
 const Bazi = () => {
   return (
     <>
-      <Container fluid="md">
-        <Row classname="row">
-          <Col sm={{ span: 6, offset: 0 }}>
-            <Image src={BaziImage} fluid />
-          </Col>
-          {/*        <Card className="bg-dark text-white">
-          <Card.Img src={HeroImage} alt="Card image" /> */}
-          {/*  <Card.ImgOverlay> */}
-          {/*    <Card.Title>CREATE YOUR BALANCE</Card.Title> */}
-
-          <Col sm={{ span: 3, offset: 2 }} className="homeCol">
-            <h1>八字</h1>
-            <h3>/ bāzì / eight characters </h3>
-          </Col>
-        </Row>
-      </Container>
-      {/*  <Image
-        src={BaziImage}
-        fluid
-        alt="five elements"
-        className="h-auto w-50"
-      /> */}
-      <div className="bazi-container">
-        <div className="bazi-left-box">
-          {/*   <div className="box-left"></div> */}
-
-          {/*  <h1 className="bazi-left-second-title">八字</h1>
-          <h3>/ bāzì / eight characters </h3> */}
-          <p className="bazi-left-body">
-            BaZi, or 生辰八字, also known as Four Pillars of Destiny, is an
-            ancient art of destiny reading, considered a concept for
-            Metaphysics, Numerology and Astrology. <br />
-            Inside each one of us lives a unique balance of energy, reflecting
-            in our BaZi charts. It is based on Yin and Yang, complex
-            combinations of Chinese characters and the following five elements:
-            Wood, Fire, Earth, Metal and Water.
-            <br />
-            Furthermore, BaZi is linked to Traditional Chinese Medicine (TCM)
-            and the application of FengShui. <br />
-            It is the ancient wisdom of energy and balance.
-            <br />
-            BaZi tells us about who we are, such as information on the state of
-            our health, our personality traits, conscious and subconscious
-            thoughts, also our actions and interactions with people and the
-            universe.
-          </p>
-        </div>
+      <div className="d-flex flex-column justify-content-center">
+        <Image
+          src={BaziImage}
+          fluid
+          style={{
+            margin: "auto",
+            maxWidth: "90%",
+            textAlign: "center",
+          }}
+        />
       </div>
+      <div className="d-flex flex-column justify-content-center">
+        <h1
+          style={{
+            textAlign: "center",
+            fontFamily: "EBGaramond",
+            fontWeight: "bold",
+            marginBottom: "3vh",
+            marginTop: "5vh",
+          }}
+        >
+          What is BaZi?
+        </h1>
+        <h1
+          style={{
+            textAlign: "center",
+            fontFamily: "EBGaramond",
+            fontWeight: "bold",
+            marginBottom: "3vh",
+          }}
+        >
+          八字
+        </h1>
+        <h3
+          style={{
+            textAlign: "center",
+            fontFamily: "Proxima Nova",
+            fontStyle: "italic",
+          }}
+        >
+          / bāzì / eight characters{" "}
+        </h3>
+      </div>
+
+      <div>
+        <p
+          style={{
+            fontFamily: "Proxima Nova",
+            marginLeft: "8vh",
+            marginRight: "8vh",
+            marginTop: "8vh",
+          }}
+        >
+          八字, or 生辰八字, also known as Four Pillars of Destiny, is an
+          ancient Chinese study of energy, time and balance. It was considered a
+          concept for Metaphysics, Numerology and Astrology. <br />
+          BaZi is based on combinations of specific Chinese characters, the Yin
+          and Yang philosophy, and the five elements: Wood, Fire, Earth, Metal
+          and Water.
+          <br /> It is also linked to the application of Traditional Chinese
+          Medicine (TCM) and FengShui. <br />
+          BaZi reflects who we are, our interactions with others, and the energy
+          of the universe. It is a guide to a balanced mind, body and life.
+        </p>
+
+        <a
+          href="/about"
+          style={{
+            color: "#DB7846",
+            fontFamily: "EBGaramond",
+            marginLeft: "8vh",
+            marginRight: "8vh",
+            marginTop: "3vh",
+          }}
+        >
+          learn more about cinq éléments
+        </a>
+      </div>
+      <Row>
+        <Col>
+          <hr style={{ height: "20" }} />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Testimonials />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <hr style={{ height: "20" }} />
+        </Col>
+      </Row>
+      <Footer />
     </>
   );
 };

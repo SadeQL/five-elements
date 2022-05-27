@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Form } from "react-bootstrap";
+import { Form, Image } from "react-bootstrap";
 import Thanks from "./Thanks";
+import contactImg from "../imgs/contact.jpg";
 
 export const Contact = () => {
   const form = useRef();
@@ -28,16 +29,50 @@ export const Contact = () => {
 
   return (
     <>
-      <h1>Contact me</h1>
-      <form ref={form} onSubmit={sendEmail} action={Thanks} id="contact-form">
-        <label>Name</label>
-        <input type="text" name="user_name" /> 
-        <label>Email</label>
-        <input type="email" name="user_email" /> 
-        <label>Message</label>
-        <textarea name="message" /> 
-        <input type="submit" value="Send" id="send"/>
-      </form>
+      <div className="d-flex flex-column justify-content-center">
+        <h1
+          style={{
+            textAlign: "center",
+            fontFamily: "EBGaramond",
+            fontWeight: "bold",
+            marginBottom: "3vh",
+            marginTop: "5vh",
+          }}
+        >
+          Contact
+        </h1>
+      </div>
+      <div className="d-flex flex-column justify-content-center">
+        <Image
+          src={contactImg}
+          fluid
+          style={{
+            margin: "auto",
+            maxHeight: "100vh",
+            width: "auto",
+            textAlign: "center",
+          }}
+        />
+      </div>
+      <div>
+        <p
+          style={{
+            fontFamily: "Proxima Nova",
+            marginLeft: "8vh",
+            marginRight: "8vh",
+            marginTop: "8vh",
+            marginBottom: "8vh",
+            textAlign: "center",
+          }}
+        >
+          If you have questions about BaZi, booking, or any business inquiries,
+          please feel free to{" "}
+          <a href="mailto:felicia.chiang@icloud.com">contact me</a>. <br />
+          Félicia
+        </p>
+      </div>
     </>
   );
 };
+
+export default Contact;

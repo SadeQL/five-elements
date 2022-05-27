@@ -1,7 +1,7 @@
 body {
-  background-color: #f8f9fa;
+  background-color: #faefd8;
   margin-left: 4vw;
-  margin-right: 4vw; 
+  margin-right: 4vw;
 }
 
 .homeCol {
@@ -11,7 +11,8 @@ body {
   justify-content: center;
 }
 
-.row, .h-50 {
+.row,
+.h-50 {
   display: flex;
   justify-content: space-around;
   margin-bottom: 2vh;
@@ -50,7 +51,7 @@ label {
 #navBarContainer {
   margin-left: -2%;
 }
- 
+
 /* @media screen and (min-width: 30em) and (orientation: landscape) {
   body {
     margin-left: 8vw;
@@ -63,5 +64,3 @@ label {
     margin-right: 7vw;
   }
 }
-
-

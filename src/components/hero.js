@@ -1,6 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import HeroImage from "../imgs/hero.png";
+
+import HeroImage from "../imgs/hero-1.png";
+import HeroImage2 from "../imgs/hero-2.jpg";
+import FlowerImg from "../imgs/flower.jpg";
 import {
   Button,
   Card,
@@ -12,8 +15,7 @@ import {
   Stack,
 } from "react-bootstrap";
 import { PopupModal } from "react-calendly";
-/* import '../App.css'
- */
+
 export default class Hero extends React.Component {
   constructor(props) {
     super(props);
@@ -27,38 +29,94 @@ export default class Hero extends React.Component {
       <>
         <Container fluid="md">
           <Row classname="row">
-            <Col sm={{ span: 6, offset: 0 }} className="homeCol">
+            <Col
+              sm={{ span: 6, offset: 0 }}
+              className="homeCol"
+              style={{ maxHeight: "80%", margin: "auto" }}
+            >
               <Image src={HeroImage} fluid />
             </Col>
-            {/*        <Card className="bg-dark text-white">
-          <Card.Img src={HeroImage} alt="Card image" /> */}
-            {/*  <Card.ImgOverlay> */}
-            {/*    <Card.Title>CREATE YOUR BALANCE</Card.Title> */}
+            <Col
+              sm={{ span: 6, offset: 0 }}
+              className="homeCol"
+              style={{ maxHeight: "80%", margin: "auto" }}
+            >
+              <Image src={HeroImage2} fluid />
+            </Col>
 
-            <Col sm={{ span: 3, offset: 2 }} className="homeCol">
-              <h1>CREATE YOUR BALANCE</h1>
-              <Button
-                class = "bookingButton"
-                variant="primary"
-                onClick={() => this.setState({ isOpen: true })}
+            <Col
+              sm={{ span: 0, offset: 0 }}
+              className="homeCol"
+              style={{ marginTop: "3vh" }}
+            >
+              <h1
+                style={{
+                  fontFamily: "EBGaramond",
+                  fontWeight: "bold",
+                  color: "#DB7846",
+                  marginTop: "8vh",
+                }}
               >
-                BOOK A SESSION
-              </Button>{" "}
-              <PopupModal
-                url="https://calendly.com/sadefryt"
-                pageSettings={this.props.pageSettings}
-                utm={this.props.utm}
-                onModalClose={() => this.setState({ isOpen: false })}
-                open={this.state.isOpen}
-                rootElement={document.getElementById("root")}
-              />
-           </Col>
+                CREATE
+                <br /> YOUR BALANCE
+              </h1>
+
+              <a
+                href="/readings"
+                style={{
+                  color: "#DB7846",
+                  fontFamily: "EBGaramond",
+                }}
+              >
+                discover more
+              </a>
+            </Col>
+          </Row>
+          <Row className="d-flex flex-column">
+            <Col>
+              <h1
+                style={{
+                  textAlign: "center",
+                  color: "#DB7846",
+                  fontFamily: "EBGaramond",
+                  margin: "10vh",
+                }}
+              >
+                Reconnect. Reflect. Cultivate.
+              </h1>
+            </Col>
+            <Col
+              sm={{ span: 6, offset: 0 }}
+              className="homeCol"
+              style={{ maxHeight: "80%", margin: "auto" }}
+            >
+              <Image src={FlowerImg} fluid />
+            </Col>
           </Row>
           <Row>
             <Col>
-              <h1 className="p-10 text-center">
-                Reconnect. Reflect. Cultivate.
-              </h1>
+              <hr style={{ height: "20" }} />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <h3
+                style={{
+                  textAlign: "center",
+                  color: "#DB7846",
+                  fontFamily: "EBGaramond",
+                  margin: "10vh",
+                }}
+              >
+                Life isn’t about finding yourself. <br />
+                Life is about creating yourself.
+                <br />— George Bernard Shaw
+              </h3>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <hr style={{ height: "20" }} />
             </Col>
           </Row>
         </Container>
